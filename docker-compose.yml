@@ -28,9 +28,9 @@ services:
       image: mysql:5.7
       restart: always
       environment:
-        MYSQL_DATABASE: 'TrackSense'
+        MYSQL_DATABASE: 'cardbase'
         # So you don't have to use root, but you can if you like
-        MYSQL_USER: 'user'
+        MYSQL_USER: 'cardmarket'
         # You can use whatever password you like
         MYSQL_PASSWORD: 'password'
         # Password for root access
@@ -45,8 +45,8 @@ services:
       volumes:
         - my-db:/var/lib/mysql
     # Names our volume
-    volumes:
-    my-db:
+volumes:
+  my-db:
 
 
 
