@@ -64,8 +64,9 @@ services:
     ports:
       - '8100:8100'
     depends_on:
+      - "storage"
       - "kafka"
-    network_mode: "host"
+    # network_mode: "host"
     environment:  
       TZ: America/Vancouver 
   
