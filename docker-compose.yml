@@ -26,6 +26,7 @@ services:
 
   db:
     image: mysql:5.7
+    hostname: db-container
     restart: always
     environment:
       MYSQL_DATABASE: ${DBNAME}
