@@ -46,6 +46,7 @@ services:
     build:
       context: ../3855-Project/Receiver
       dockerfile: Dockerfile
+    hostname: receivercon
     ports:
       - '8080:8080'
     depends_on:
@@ -58,6 +59,7 @@ services:
     build:
       context: ../3855-Project/Storage
       dockerfile: Dockerfile
+    hostname: storagecon
     ports:
       - '8090:8090'
     depends_on:
@@ -71,6 +73,7 @@ services:
     build:
       context: ../3855-Project/Processing
       dockerfile: Dockerfile
+    hostname: processingcon
     ports:
       - '8100:8100'
     depends_on:
@@ -85,6 +88,7 @@ services:
     build:
       context: ../3855-Project/Analyzer
       dockerfile: Dockerfile
+    hostname: analyzercon
     ports:
       - '8110:8110'
     depends_on:
