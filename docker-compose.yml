@@ -42,7 +42,10 @@ services:
       - my-db:/var/lib/mysql
   
   receiver:
-    image: receiver:latest
+    # image: receiver:latest
+    build:
+      context: ../3855-Project/Receiver
+      dockerfile: Dockerfile
     ports:
       - '8080:8080'
     depends_on:
@@ -51,7 +54,10 @@ services:
       TZ: America/Vancouver
   
   storage:
-    image: storage:latest
+    # image: storage:latest
+    build:
+      context: ../3855-Project/Storage
+      dockerfile: Dockerfile
     ports:
       - '8090:8090'
     depends_on:
@@ -61,7 +67,10 @@ services:
     
 
   processing:
-    image: processing:latest
+    # image: processing:latest
+    build:
+      context: ../3855-Project/Processing
+      dockerfile: Dockerfile
     ports:
       - '8100:8100'
     depends_on:
@@ -72,7 +81,10 @@ services:
       TZ: America/Vancouver 
   
   analyzer:
-    image: analyzer:latest
+    # image: analyzer:latest
+    build:
+      context: ../3855-Project/Analyzer
+      dockerfile: Dockerfile
     ports:
       - '8110:8110'
     depends_on:
