@@ -51,8 +51,7 @@ services:
     depends_on:
       - "kafka"
     environment:  
-      - TZ: America/Vancouver
-      - KAFKA_BROKER=kafka:9092
+      TZ: America/Vancouver
   
   storage:
     build:
